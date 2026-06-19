@@ -4,16 +4,7 @@
   "version": "1.0.0",
   "executa_type": "tool",
   "description": "Exposes core AI generation and assessment tools for CommunityOps Agent.",
-  "tool_id": "tool-communityops-tool-placeholder",
+  "tool_id": "tool-giansandoval-communityops-tool-ejh7utzy",
   "type": "python",
-  "enabled": true,
-  "distribution": {
-    "active": "local",
-    "profiles": {
-      "local": {
-        "type": "local",
-        "supports_protocol": true
-      }
-    }
-  }
+  "enabled": true
 }

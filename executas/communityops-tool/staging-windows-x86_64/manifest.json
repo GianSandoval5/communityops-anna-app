@@ -1,0 +1,16 @@
+﻿{
+  "name": "tool-giansandoval-communityops-tool-ejh7utzy",
+  "display_name": "CommunityOps Tool",
+  "version": "1.0.0",
+  "description": "Exposes core AI generation and assessment tools for CommunityOps Agent.",
+  "runtime": {
+    "binary": {
+      "entrypoint": {
+        "default": "bin/tool-giansandoval-communityops-tool-ejh7utzy.exe"
+      },
+      "permissions": {
+        "bin/tool-giansandoval-communityops-tool-ejh7utzy.exe": "0o755"
+      }
+    }
+  }
+}

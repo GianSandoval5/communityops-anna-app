@@ -1,0 +1,20 @@
+{
+  "slug": "communityops-agent",
+  "name": "CommunityOps Agent",
+  "version": "1.0.0",
+  "tagline": "AI-powered event operations assistant for tech communities.",
+  "description": "CommunityOps Agent helps technology organizers plan meetups, coordinate speakers, manage sponsors, create operational checklists, and detect risks. Built for community groups like GDG, Flutter, React Native, and tech conference organizers.",
+  "category": "productivity",
+  "logo_url": "https://raw.githubusercontent.com/GianSandoval5/CommunityOps-Agent/master/web/icons/Icon-192.png",
+  "cover_url": "https://raw.githubusercontent.com/GianSandoval5/CommunityOps-Agent/master/web/icons/Icon-512.png",
+  "screenshots": [],
+  "homepage_url": "https://github.com/GianSandoval5/CommunityOps-Agent",
+  "support_url": "https://github.com/GianSandoval5/CommunityOps-Agent/issues",
+  "privacy_url": "https://github.com/GianSandoval5/CommunityOps-Agent/blob/master/LICENSE",
+  "pricing_model": "free",
+  "bundled_executas": {
+    "communityops-tool": {
+      "path": "./executas/communityops-tool"
+    }
+  }
+}

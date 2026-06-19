@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommunityOps Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="logo-area">
+        <h1>CommunityOps Agent</h1>
+        <p class="subtitle">AI Event Operations Assistant</p>
+      </div>
+      <div class="readiness-badge" id="readinessBadge">Readiness: --</div>
+    </header>
+
+    <main class="main-content">
+      <!-- Input Section -->
+      <section class="config-panel card">
+        <h2>Event Parameters</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="communityType">Community Type</label>
+            <select id="communityType">
+              <option value="Google Developer Groups (GDG)">Google Developer Groups (GDG)</option>
+              <option value="Flutter Community">Flutter Community</option>
+              <option value="React Native Community">React Native Community</option>
+              <option value="General Tech Meetup">General Tech Meetup</option>
+              <option value="Tech Conference">Technology Conference</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="eventName">Event Name / Topic</label>
+            <input type="text" id="eventName" placeholder="e.g. Flutter 2026 Roadmap Showcase" value="GDG AI Build Day">
+          </div>
+          <div class="form-group full-width">
+            <label for="eventDetails">Additional Details (Sponsors, Target size, Speakers)</label>
+            <textarea id="eventDetails" rows="2" placeholder="e.g. 100 attendees, 2 speakers, MongoDB sponsoring food..."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Action Tabs -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="plan">Execution Plan</button>
+        <button class="tab-btn" data-tab="checklist">Checklist</button>
+        <button class="tab-btn" data-tab="comms">Communications</button>
+        <button class="tab-btn" data-tab="risks">Risks & Readiness</button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <section class="tab-content card">
+        <div id="tab-plan" class="tab-pane active">
+          <div class="pane-header">
+            <h3>Event Execution Plan</h3>
+            <button class="btn btn-primary" id="btnPlan">Generate Plan</button>
+          </div>
+          <div class="output-area" id="planOutput">Click Generate to create a timeline and execution plan...</div>
+        </div>
+
+        <div id="tab-checklist" class="tab-pane">
+          <div class="pane-header">
+            <h3>Operational Checklist</h3>
+            <button class="btn btn-primary" id="btnChecklist">Generate Checklist</button>
+          </div>
+          <div class="output-area" id="checklistOutput">Click Generate to compile custom tasks...</div>
+        </div>
+
+        <div id="tab-comms" class="tab-pane">
+          <div class="pane-header">
+            <h3>Speaker & Sponsor Comms</h3>
+            <div class="comms-actions">
+              <button class="btn" id="btnSpeakerComms">Draft Speaker Msg</button>
+              <button class="btn" id="btnSponsorComms">Draft Sponsor Msg</button>
+            </div>
+          </div>
+          <div class="output-area" id="commsOutput">Select a template above to draft personalized communications...</div>
+        </div>
+
+        <div id="tab-risks" class="tab-pane">
+          <div class="pane-header">
+            <h3>Risk Assessment & Readiness</h3>
+            <button class="btn btn-danger" id="btnRisks">Assess Risks & Score</button>
+          </div>
+          <div class="output-area" id="risksOutput">Click the button above to run risk analysis and calculate an Event Readiness Score...</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span class="status-text" id="statusText">Ready</span>
+    </footer>
+  </div>
+
+  <script src="anna-tool-ids.js" defer></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

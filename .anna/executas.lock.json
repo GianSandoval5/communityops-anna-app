@@ -1,0 +1,11 @@
+{
+  "$schema": "anna-executas-lock/v1",
+  "host": "https://anna.partners",
+  "executas": {
+    "communityops-tool": {
+      "tool_id": "tool-giansandoval-communityops-tool-ejh7utzy",
+      "path": "./executas/communityops-tool",
+      "source": "cut"
+    }
+  }
+}

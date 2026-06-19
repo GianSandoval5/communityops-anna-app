@@ -1,0 +1,19 @@
+{
+  "slug": "communityops-tool",
+  "name": "CommunityOps Tool",
+  "version": "1.0.0",
+  "executa_type": "tool",
+  "description": "Exposes core AI generation and assessment tools for CommunityOps Agent.",
+  "tool_id": "tool-communityops-tool-placeholder",
+  "type": "python",
+  "enabled": true,
+  "distribution": {
+    "active": "local",
+    "profiles": {
+      "local": {
+        "type": "local",
+        "supports_protocol": true
+      }
+    }
+  }
+}

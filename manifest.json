@@ -1,0 +1,66 @@
+{
+  "schema": 2,
+  "permissions": [
+    "tools.invoke",
+    "chat.write_message",
+    "storage.read",
+    "storage.write",
+    "ui.svg",
+    "llm.complete"
+  ],
+  "required_executas": [
+    {
+      "tool_id": "bundled:communityops-tool",
+      "min_version": "1.0.0"
+    }
+  ],
+  "ui": {
+    "bundle": {
+      "format": "static-spa",
+      "entry": "index.html"
+    },
+    "views": [
+      {
+        "name": "main",
+        "title": "CommunityOps Agent",
+        "default": true,
+        "min_size": {
+          "w": 400,
+          "h": 600
+        },
+        "default_size": {
+          "w": 520,
+          "h": 720
+        },
+        "max_size": {
+          "w": 800,
+          "h": 1000
+        },
+        "icon": "icon.svg"
+      }
+    ],
+    "host_api": {
+      "tools": [
+        "required:bundled:communityops-tool"
+      ],
+      "llm": [
+        "complete"
+      ],
+      "chat": [
+        "write_message"
+      ],
+      "storage": [
+        "get",
+        "set",
+        "delete"
+      ],
+      "window": [
+        "set_title",
+        "resize",
+        "focus",
+        "close",
+        "open_view"
+      ]
+    }
+  }
+}

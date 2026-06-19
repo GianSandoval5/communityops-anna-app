@@ -1,0 +1,8 @@
+{
+  "$schema": "anna-app-identity/v1",
+  "host": "https://anna.partners",
+  "app_id": 63,
+  "slug": "communityops-agent",
+  "handle": "giansandoval",
+  "first_published_at": "2026-06-19T05:40:08.925Z"
+}

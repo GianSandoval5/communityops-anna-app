@@ -1,0 +1,13 @@
+{
+  "name": "communityops-anna-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Anna App bundle for CommunityOps Agent.",
+  "scripts": {
+    "dev": "anna-app dev",
+    "validate": "anna-app validate --strict"
+  },
+  "devDependencies": {
+    "@anna-ai/cli": "^0.1.22"
+  }
+}

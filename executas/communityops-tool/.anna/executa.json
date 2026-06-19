@@ -1,0 +1,9 @@
+{
+  "$schema": "anna-executa-identity/v1",
+  "host": "https://anna.partners",
+  "executa_id": 1015,
+  "tool_id": "tool-giansandoval-communityops-tool-ejh7utzy",
+  "slug": "communityops-tool",
+  "executa_type": "tool",
+  "first_published_at": "2026-06-19T05:40:05.679Z"
+}

@@ -1,0 +1,58 @@
+name: Build macOS Binary
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/build-macos.yml"
+      - "executas/communityops-tool/**"
+
+jobs:
+  build-macos:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyInstaller
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyinstaller
+
+      - name: Build Binary
+        run: |
+          cd executas/communityops-tool
+          pyinstaller --onefile communityops_plugin.py --name tool-giansandoval-communityops-tool-ejh7utzy
+
+      - name: Prepare Package
+        run: |
+          mkdir -p package/bin
+          cp executas/communityops-tool/dist/tool-giansandoval-communityops-tool-ejh7utzy package/bin/
+
+          cat > package/manifest.json <<'EOF'
+          {
+            "name": "tool-giansandoval-communityops-tool-ejh7utzy",
+            "version": "1.0.0",
+            "runtime": {
+              "binary": {
+                "entrypoint": {
+                  "default": "bin/tool-giansandoval-communityops-tool-ejh7utzy"
+                }
+              }
+            }
+          }
+          EOF
+
+          tar -czf tool-giansandoval-communityops-tool-ejh7utzy-darwin-arm64.tar.gz -C package .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tool-giansandoval-communityops-tool-ejh7utzy-darwin-arm64
+          path: tool-giansandoval-communityops-tool-ejh7utzy-darwin-arm64.tar.gz

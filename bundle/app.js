@@ -2,10 +2,21 @@ import { AnnaAppRuntime } from "/static/anna-apps/_sdk/latest/index.js";
 
 // Placeholder fallback for local preview
 let anna = null;
-let TOOL_ID = "tool-communityops-tool-placeholder";
+let TOOL_ID = "tool-giansandoval-communityops-tool-ejh7utzy";
 
 // Load minted Tool ID if injected on publish
-if (typeof anna_tool_ids !== "undefined" && anna_tool_ids["communityops-tool"]) {
+if (
+  typeof window !== "undefined" &&
+  window.__ANNA_TOOL_IDS__ &&
+  window.__ANNA_TOOL_IDS__["communityops-tool"]
+) {
+  TOOL_ID = window.__ANNA_TOOL_IDS__["communityops-tool"];
+}
+
+if (
+  typeof anna_tool_ids !== "undefined" &&
+  anna_tool_ids["communityops-tool"]
+) {
   TOOL_ID = anna_tool_ids["communityops-tool"];
 }
 
